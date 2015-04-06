@@ -22,7 +22,7 @@ pkgver() {
 }
 
 prepare() {
-  cd "${srcdir}/${pkgname}-${pkgver}"
+  cd "${srcdir}/${_pkgname}"
 
   chmod +x autogen.sh
   ./autogen.sh
@@ -30,13 +30,13 @@ prepare() {
 }
 
 build() {
-  cd "${srcdir}/${pkgname}-${pkgver}"
+  cd "${srcdir}/${_pkgname}"
 
   make
 }
 
 package() {
-  cd "${srcdir}/${pkgname}-${pkgver}"
+  cd "${srcdir}/${_pkgname}"
 
   make DESTDIR="${pkgdir}" install
 }
