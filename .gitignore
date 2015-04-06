@@ -1,0 +1,10 @@
+# "build" files
+src
+pkg
+*.tar.gz
+*.tar.xz
+
+# Misc files
+.*
+!.editorconfig
+!.gitignore
