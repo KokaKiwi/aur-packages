@@ -15,15 +15,22 @@ depends=('glibc')
 makedepends=('git')
 provides=('gumbo-parser')
 
-build() {
+prepare() {
   cd "${srcdir}/${pkgname}-${pkgver}"
+
   chmod +x autogen.sh
   ./autogen.sh
   ./configure --prefix=/usr
+}
+
+build() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+
   make
 }
 
 package() {
   cd "${srcdir}/${pkgname}-${pkgver}"
+
   make DESTDIR="${pkgdir}" install
 }
