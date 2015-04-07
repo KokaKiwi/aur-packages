@@ -4,6 +4,7 @@ _pkgname=gumbo-parser
 pkgname=gumbo-parser-git
 pkgver=0.9.3.r96.g140e6cc
 pkgrel=1
+epoch=1
 pkgdesc='A pure-C HTML5 parser'
 url='https://github.com/google/gumbo-parser'
 license=('Apache')
